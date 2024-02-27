@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <form action="signup_action_page.php" style="border:1px solid #ccc">
+        <div class="container">
+            <h2>Sign Up</h2>
+
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="text" placeholder="E-mail" name="email" required>
+            <input type="password" placeholder="Password" name="psw" required>
+
+            <div class="clearfix">
+                <button type="submit" class="signupbtn">SIGN UP</button>
+                <!-- Button to link to the signin page -->
+                <a href="Signin.html" class="signinbtn-link">
+                    <button type="button" class="signinbtn">SIGN IN</button>
+                </a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

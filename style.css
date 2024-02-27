@@ -1,0 +1,107 @@
+To adjust the CSS to have a standard appearance without any float alignment for the buttons and to make sure they span the full width of the container, you can modify the `.signupbtn` and `.signinbtn-link button` styles to not float and take the full width.
+
+Here is the adjusted CSS:
+
+```css
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Style buttons */
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+/* Adjust button width */
+.signupbtn, .signinbtn-link button {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin-bottom: 10px; /* Spacing between the buttons */
+}
+
+/* Adjust the signin button style */
+.signinbtn-link button {
+    background-color: #fff;
+    color: #3498db;
+    border: 1px solid #3498db;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .signupbtn, .signinbtn-link button {
+        width: 100%;
+    }
+}
+
+/* Link styles */
+.signinbtn-link {
+    text-decoration: none;
+    display: block; /* Make it a block to fill the width */
+    margin-bottom: 10px; /* Adjusted spacing */
+}
+
+.signinbtn-link button:hover {
+    background-color: #2980b9; /* Hover color for sign in button */
+}
+
+/* Adjust the submit button hover separately */
+.signupbtn:hover {
+    background-color: #3cb0fd; /* Hover color for sign up button */
+}
+```
+
+With these adjustments, both the SIGN IN and SIGN UP buttons will span the full width of the `.container` class, and the SIGN IN button will be styled as a plain link with a blue border and text color. The hover effect will change the background color of the SIGN IN button to a darker blue.
